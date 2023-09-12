@@ -27,4 +27,41 @@ public class Main
 }
 
 
-2.   
+2.   find if a year is leap or not
+if (year%400 == 0)
+	leap year
+else
+	not a leap year
+
+3. switch statement
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	String s1;
+	while(true){
+	Scanner scan = new Scanner(System.in);
+	s1 = scan.nextLine();
+	
+	switch(s1){
+	    case "h": 
+	        System.out.println("hello");
+	                break;
+	                
+	   case "q":   
+	       System.out.println("qwerty");
+	                break;
+	   case 3:    System.out.println("gas");
+	                break;
+	   default:     System.out.println("nothing");
+ 
+	}
+	}}
+}
+SO SWITCH WORKS WITH INTEGERS AS WELL AS CHARECTERS, strings. dont work with float. 
+
+
+4. 
