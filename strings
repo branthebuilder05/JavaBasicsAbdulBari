@@ -1,0 +1,137 @@
+1. FIND EMAIL ID IS GMAIL OR NOT AND FIND USERNAME AND DOMAINNAME OF ID. 
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	  
+	    String s3 ="Shashank@gmail.com";
+	    int i = s3.indexOf('@');
+	    String s1 = s3.substring(0,i);
+	    String s2 = s3.substring(i+1);
+	    if (s3.matches(".*gmail.*")){
+	        System.out.println("It is a gmail id " + "and username is " + s1 + " and domain name is "+ s2       );
+	    }
+	    int oo = 90;
+	    String s5 = s3.valueOf(3);
+	//	System.out.println(20+String.valueOf(oo) );
+	}
+}
+
+
+2.  
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	  
+	    String s3 ="Shashank@gmail.com";
+	    int i = s3.indexOf('@');
+	    String s1 = s3.substring(0,i);
+	    String s2 = s3.substring(i+1);
+	   
+	   String s4 ;
+	   int k = s3.indexOf('.');
+	   s4 = s3.substring(i+1,k);
+	   
+		System.out.println(s4.compareTo("gmail") );
+	}
+}
+
+
+3. find if a number is in binary format or not
+5. check if a number is in hexadecimal or not
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    
+	    String s1 = "011110101010111100011";
+	    String s2 = "ABC3485675784F";
+	    String s3 = "17/08/1995";
+	    if(s1.matches("[01]*")){
+	        System.out.println("it is binary");
+	    }
+	    if(s2.matches("[0-9 A-F]*")){
+	        System.out.println("it is hexadecimal");
+	        
+	    }
+	    if(s3.matches("[1-31]*/[1-12]*/\\d*")){
+	        System.out.println("it is a date");
+	    }
+       if(s3.matches("[0-3][0-9]/[0-1][0-9]/\\d{4}")){
+	        System.out.println("it is a date");
+	    }
+	    
+		//System.out.println("Hello World");
+	}
+}
+
+5. remove special charecters from string
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	   
+	    String s7 = "34#     57%a*     hsd*fg  5'6   nfv=   56   ";
+	    
+	    String s1;
+	    
+	  s1 =   s7.replaceAll("[^0-9a-zA-Z]" ,"");
+	    System.out.println(s1); 
+	    
+	}
+}
+
+
+
+
+
+6. remove extra spaces from string and put single space
+ex        abc      cderf    hhgfdf ghjhh   fggh  ggg   jfhh     
+op is     abc cderf hhgfdf ghjhh fggh ggg jfhh
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	   
+	    String s7 = "34#     57%a*     hsd*fg  5'6   nfv=   56   ";
+	    
+	    String s1;
+	    
+	  s1 =   s7.replaceAll("\\s+" ," ");
+	    System.out.println(s1); 
+	    
+	}
+}
+
+
+7. find # of words in string
+public class Main
+{
+	public static void main(String[] args) 
+	    String s7 = "34#     57%a*     hsd*fg  5'6   nfv=   56   ";
+	    String s1 =   s7.replaceAll("\\s+" ," ");
+	    System.out.println(s1); 
+	    int len = s1.length();
+	   // System.out.println(s1.charAt(5));
+	    int i=0,word = 0;
+	    while(i<len){
+	        String temp = s1.substring(i,i+1);
+	       // System.out.println(temp);
+	        if(temp.equals(" ")){
+	            word++;
+	        }
+	        i++;
+	        
+	    }
+	    System.out.println(word);
+	    
+	}
+}
+
+
+
+
