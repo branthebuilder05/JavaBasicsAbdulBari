@@ -1,0 +1,79 @@
+1         find second max element
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	   
+		System.out.println("Hello World");
+		int arr[] = new int[7];
+		for(int i=0;i<5;i++){
+		    arr[i] = scan.nextInt();
+		}
+		
+		int max,secmax;
+		if (arr[0]>arr[1]){
+		    max=arr[0];
+		    secmax=arr[1];
+		}
+		else{
+		    max=arr[1];
+		    secmax=arr[2];
+		}
+		for(int i=2;i<arr.length;i++){
+		    if(arr[i]>secmax){
+		        if(arr[i]>max){
+		             secmax=max;
+		              max=arr[i];
+		        }
+		        else
+		            secmax=arr[i];
+		    }
+		       
+		    }
+		
+		System.out.println(secmax);
+	}
+}
+
+
+2. rotate an array
+
+import java.util.*;
+
+public class Main
+{
+  void rot(int arr[],int a,int b ){
+      
+  }
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	     int arr[] = {1,2,3,4,5,6,7,8,9};
+		System.out.println("Hello World");
+		
+		int rotate, rotateby;
+		System.out.println("enter 1 for left roate, 2 for right roate");
+		rotate=scan.nextInt();
+		System.out.println("by how much to rotate");
+		rotateby = scan.nextInt();
+		
+		if(rotate ==1){
+		   rot(arr,0,rotate);
+		   rot(arr,rotate,arr.length);
+		   rot(arr,0,arr.length);
+		   
+		}
+		if (rotate == 2){
+		    
+		}
+	
+	}
+}
+
+
+
+
+
+
+3. 
