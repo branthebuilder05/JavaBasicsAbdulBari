@@ -1,0 +1,354 @@
+loops
+1. display numbers 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    
+	    int n;
+		System.out.print("Enter a number: ");
+		n = scan.nextInt();
+		System.out.print("the numbers are: ");
+		for(;n>0;){
+		    int temp = n%10;
+		    print(temp);
+		    //System.out.print(temp+" ");
+		    n/=10;
+		}
+}
+ static void print(int n) {
+     
+        System.out.print(n+" ");
+        
+}
+}
+
+
+
+2. count numbers in digit
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    
+	    int n;
+		System.out.print("Enter a number: ");
+		n = scan.nextInt();
+		System.out.print("the count of number is: ");
+		int temp = 0;
+		for(;n>0; n/=10){
+		    temp++;
+		}
+		System.out.print(temp);
+}
+}
+
+
+
+3. find if a number is armstrong or  not
+import java.util.*;
+import java.lang.Math;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    
+	    int n;
+		System.out.print("Enter a number: ");
+		n = scan.nextInt();
+		System.out.print("the armstrong of number is: ");
+		int count = 0,nn =n;
+		for(;nn>0; nn/=10){
+		    count++;
+		}
+		
+		int sum=0,temp;
+		for ( int i = n ;i>0  ;i/=10 ){
+		    temp = i%10;
+		    sum += Math.pow(temp,count);
+		    
+		    
+		    
+		}
+		System.out.print(sum);
+		if(n==(sum))
+		    System.out.print("yes");
+}
+}
+
+
+4. check if palindrome
+
+
+
+import java.util.*;
+import java.lang.Math;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner scan = new Scanner(System.in);
+	    while(true){
+	    int n = scan.nextInt();
+	    double newsum=0;
+	    int temp=n;
+	    for(int i=0;temp>0;i++){
+	        
+	        double a=temp%10;
+	        newsum = a+ newsum*10;
+	        
+	        temp/=10;
+	        System.out.println(newsum+ " "+temp+" "+i);
+	        
+	    }
+	     System.out.println(n+" "+newsum);
+	    if(n==newsum)
+		    System.out.println("yes");
+	}
+}}
+
+5. write number in words
+
+
+
+import java.util.*;
+import java.lang.Math;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner scan = new Scanner(System.in);
+	    while(true){
+	    int n = scan.nextInt();
+	    String newsum="";
+	    int temp=n;
+	    for(int i=0;temp>0;i++){
+	        
+	        int a=temp%10;
+	        newsum += a;
+	        
+	        temp/=10;
+	        
+	        
+	    }
+	   System.out.println(newsum);
+	   char aa;
+	   for(int i=newsum.length()-1;i>-1;i--){
+	       aa =newsum.charAt(i);
+	       switch (aa){
+	           case '1': System.out.println("one ");break;
+	           case '2': System.out.println("two ");break;
+	           case '3': System.out.println("three ");break;
+	           case '4': System.out.println("four ");break;
+	           case '5': System.out.println("five ");break;
+	           case '6': System.out.println("six ");break;
+	           case '7': System.out.println("seven ");break;
+	           case '8': System.out.println("eight ");break;
+	           case '9': System.out.println("nine ");break;
+	           case '0': System.out.println("zero ");break;
+	       }
+	   }
+	   
+	}
+}}
+
+6. gp series
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int a,b,c;
+		Scanner scan = new Scanner(System.in);
+		a=scan.nextInt() ; //first term 
+		b = scan.nextInt(); //common ratio 
+		c = scan.nextInt(); // no of term
+		int temp = a;
+		for(int i=0;i<c;i++){
+		    
+		    System.out.print(temp+",");
+		    temp = temp*b;
+		}
+		//System.out.print(temp+",");
+	}
+}
+
+
+
+7. fibonacci
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int first=0,second=1,third,count;
+		System.out.println("How many term you want");
+		Scanner scan = new Scanner(System.in);
+	count = scan.nextInt();
+	
+	if (count == 1)
+	    System.out.println(first);
+	  if(count >=2 )
+	    System.out.print(first + " "+ second+" ");
+	for(int i = 2;i<count;i++){
+	    third = first+second;
+	    System.out.print(third+" ");
+	    
+		first = second;
+		second = third;
+	}
+}
+}
+
+
+8. nexted loop
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n,m;
+	    n= scan.nextInt();
+	    m= scan.nextInt();
+	    
+		System.out.println("Hello World");
+		for(int i=0;i<n;i++)
+		    for(int j=0;j<m;j++)
+		    System.out.println(i+" "+j);
+	}
+}
+
+
+9.   print pattern
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int n,m;
+	    n= scan.nextInt();
+	    m= scan.nextInt();
+	    
+		System.out.println("Hello World");
+		for(int i=0;i<n;i++){
+		    for(int j=1;j<=m;j++)
+		    System.out.print(j+" ");
+	System.out.println("");
+		}
+	}
+}
+
+
+
+10.   star pattern
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int star,space=0,size;
+	    size = scan.nextInt();
+	    star = size;
+	    for(int i=0;i<size;i++){
+	       for(int j=0;j<space;j++){
+	            System.out.print(" ");
+	        }
+	     for(int j=0;j<star;j++){
+	            System.out.print("*");
+	        }
+	    
+	        star-=2;
+	        space++;
+	        System.out.print("\n");
+	        
+	    }
+	//	System.out.println("Hello World");
+	}
+}
+
+
+
+
+
+
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	    int star,space=0,size;
+	    size = scan.nextInt();
+	    star = 1;
+	    space = size-1;
+	    for(int i=0;i<size;i++){
+	       for(int j=0;j<space;j++){
+	            System.out.print(" ");
+	        }
+	     for(int j=0;j<star;j++){
+	            System.out.print("*");
+	        }
+	    
+	        star+=2;
+	        space--;
+	        System.out.print("\n");
+	        
+	    }
+	//	System.out.println("Hello World");
+	}
+}
+
+
+
+
+
+
+
+
+11.  find second max
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner(System.in);
+	   
+		System.out.println("Hello World");
+		int arr[] = new int[7];
+		for(int i=0;i<5;i++){
+		    arr[i] = scan.nextInt();
+		}
+		
+		int max,secmax;
+		if (arr[0]>arr[1]){
+		    max=arr[0];
+		    secmax=arr[1];
+		}
+		else{
+		    max=arr[1];
+		    secmax=arr[2];
+		}
+		for(int i=2;i<arr.length;i++){
+		    if(arr[i]>secmax){
+		        if(arr[i]>max){
+		             secmax=max;
+		              max=arr[i];
+		        }
+		        else
+		            secmax=arr[i];
+		    }
+		       
+		    }
+		
+		System.out.println(secmax);
+	}
+}
+
