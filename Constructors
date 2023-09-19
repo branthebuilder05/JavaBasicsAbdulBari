@@ -1,0 +1,32 @@
+basic constructors
+display()
+display(String str)
+
+
+constructor overloading
+
+
+most imp dynamic method dispatching
+
+
+class phone(){
+
+
+void display(){"phone"}
+void call(){}
+void imei(){}
+
+}
+
+class smartphone(){}
+
+void display(){"smartphone"}
+void youtubeplay(){}
+void whatsappmsg(){}
+}
+
+phone p = new phone();
+phone sp = new smartphone();
+
+phone p1 = new smartphone();
+this p1 will be able to call display(), call(), and imei() function. display will be from smartphone class so "smartphone" will be printed.
