@@ -1,0 +1,283 @@
+OOP
+
+1. RECTANGLE CLASS
+
+
+package rectangletest;
+
+class Rectangle
+{
+    public double length;
+    public double breadth;
+    
+    public double area()
+    {
+        return length*breadth;
+    }
+    
+    public double perimeter()
+    {
+        return 2*(length+breadth);
+    }
+    
+    public boolean isSquare()
+    {
+        if(length==breadth)
+            return true;
+        else
+            return false;
+    }
+    
+}
+
+public class RectangleTest {
+
+    public static void main(String[] args) {
+        Rectangle r=new Rectangle();
+        r.length=10.5;
+        r.breadth=5.5;
+        
+        System.out.println("Area"+r.area());
+        System.out.println("perimeter"+r.perimeter());
+        
+        System.out.println("Is it a Square"+r.isSquare());
+    }
+    
+}
+
+
+
+
+
+2. RECTANGLE     USING GETTER AND SETTER
+
+
+package rectangletest1;
+
+class Rectangle
+{
+    private double length;
+    private double breadth;
+    
+    public double getLength()
+    {
+        return length;
+    }
+    
+    public double getBreadth()
+    {
+        return breadth;
+    }
+    
+    public void setLength(double l)
+    {
+        if(l>=0)
+            length=l;
+        else
+            length=0;
+    }
+    
+    public void setBreadth(double b)
+    {
+        if(b>=0)
+            breadth=b;
+        else 
+            breadth=0;
+    }
+    
+    public double area()
+    {
+        //return length*breadth;
+        return getLength()*getBreadth();
+    }
+    
+    public double perimeter()
+    {
+        return 2*(length+breadth);
+    }
+    
+    public boolean isSquare()
+    {
+        if(length==breadth)
+            return true;
+        else 
+            return false;
+    }
+}
+        
+
+public class RectangleTest1 {
+
+    public static void main(String[] args) {
+        Rectangle r=new Rectangle();
+        r.setLength(10.5);//check with negative values.
+        r.setBreadth(5.5);
+        
+        System.out.println("Area "+r.area());
+        System.out.println("Perimeter "+r.perimeter());
+        System.out.println("Is Square "+r.isSquare());
+        
+        System.out.println("Length "+r.getLength());
+        System.out.println("Breadth "+r.getBreadth());
+    }
+    
+}
+
+
+
+
+
+3.     USING CONSTRUCTORS WITH OVERLOADING FEATURE
+
+
+
+package cylindertest;
+
+class  Cylinder
+{
+    private int radius;
+    private int height;
+    
+    public Cylinder()
+    {
+        radius=height=1;
+    }
+    public Cylinder(int r,int h)
+    {
+        radius=r;
+        height=h;
+    }
+    public int getHeight()
+    {
+        return height;
+    }
+    public int getRadius()
+    {
+        return radius;
+    }
+    
+    public void setHeight(int h)
+    {
+        if(h>=0)
+            height=h;
+        else
+            height=0;
+    }
+    public void setRadius(int r)
+    {
+        if(r>=0)
+            radius=r;
+        else
+            radius=0;
+    }
+    public void setDimensions(int h,int r)
+    {
+        height=h;
+        radius=r;
+    }
+    
+    public double lidArea()
+    {
+        return Math.PI*radius*radius;
+    }
+    public double perimeter()
+    {
+        return 2*Math.PI*radius;
+    }
+    public double drumArea()
+    {
+        return 2*lidArea()+perimeter()*height;
+    }
+    public double volume()
+    {
+        return lidArea()*height;
+    }
+}
+
+
+public class CylinderTest {
+
+    public static void main(String[] args) {
+        Cylinder c=new Cylinder();
+        c.setHeight(10);
+        c.setRadius(7);
+        c.setDimensions(10, 7);
+        
+        System.out.println("LidArea "+c.lidArea());
+        System.out.println("Circumference "+c.perimeter());
+        System.out.println("totalSurfaceArea "+c.drumArea());
+        System.out.println("Volume "+c.volume());
+        System.out.println("Height"+c.getHeight());
+        System.out.println("Radius"+c.getRadius());
+        
+    }
+    
+}
+
+
+4.    CLASS BE BE DECLARED AS ARRAY TOO. 
+
+
+package scloops;
+
+class Subject
+{
+    private String subID;
+    private String name;
+    private int maxMarks;
+    private int marksObtains;
+    
+    public Subject(String subID,String name,int maxMarks)
+    {
+        this.subID=subID;
+        this.name=name;
+        this.maxMarks=maxMarks;
+    }
+    
+    public String getSubID(){return subID;}
+    public String getName(){return name;}
+    public int getMaxMarks(){return maxMarks;}
+    public int getMarksObtains(){return marksObtains;}
+    
+    public void setMaxMarks(int mm)
+    {
+        maxMarks=mm;
+    }
+    
+    public void setMarksObtain(int m)
+    {
+        marksObtains=m;
+    }
+    
+    boolean isQualified()
+    {
+        return marksObtains>=maxMarks/10*4;
+    }
+    
+    public String toString()
+    {
+        return"\n SubjectID: "+subID+"\n Name "+name+"\n MarksObtained "+marksObtains;
+    }
+    
+}
+
+public class SCLoops {
+
+    public static void main(String[] args) 
+    {
+        Subject subs[]=new Subject[3];
+        subs[0]=new Subject("s101","DS",100);
+        subs[1]=new Subject("s102","Algorithms",100);
+        subs[2]=new Subject("s103","Operating Systems",100);
+        
+        for(Subject s:subs)
+            System.out.println(s);
+    }
+    
+}
+
+
+
+
+
+
