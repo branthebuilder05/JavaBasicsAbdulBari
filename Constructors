@@ -30,3 +30,40 @@ phone sp = new smartphone();
 
 phone p1 = new smartphone();
 this p1 will be able to call display(), call(), and imei() function. display will be from smartphone class so "smartphone" will be printed.
+
+
+
+ACTUAL CODE PF DYNAMIC METHOD DISPATCH
+
+class phone{
+
+
+public void display(){System.out.println("phone");}
+public void call(){System.out.println("call");}
+public void imei(){System.out.println("imei");}
+
+}
+
+class smartphone extends phone{
+
+public void display(){
+    System.out.println("smartphone");}
+public void youtubeplay(){System.out.println("youtubeplay");}
+public void whatsappmsg(){System.out.println("whatsappmsg");}
+
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		phone p = new phone();
+        phone sp = new smartphone();
+        
+        sp.display();
+        p.display();
+        sp.imei();
+        //sp.youtubeplay(); // wont work
+	}
+}
+
