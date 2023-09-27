@@ -1,0 +1,34 @@
+abstract method is like interface but can contain definition methos too.
+in interface only method prototype allowed
+
+// Abstract class
+abstract class Sunstar {
+	abstract void printInfo();
+	void p(){
+	 	System.out.println(25421);   
+	}
+}
+
+// Abstraction performed using extends
+class Employee extends Sunstar {
+	void printInfo()
+	{
+		String name = "avinash";
+		int age = 21;
+		float salary = 222.2F;
+
+		System.out.println(name);
+		System.out.println(age);
+		System.out.println(salary);
+	}
+}
+
+// Base class
+class Main {
+	public static void main(String args[])
+	{
+		Sunstar s = new Employee();
+		s.printInfo();
+		s.p();
+	}
+}
