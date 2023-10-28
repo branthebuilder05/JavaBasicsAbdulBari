@@ -1,0 +1,22 @@
+
+import java.lang.*;
+public class Main extends Thread
+
+{
+    public void run(){
+        long i=5;
+		while(i<100){
+		    System.out.println(i+" Hello from Chinu");
+		    i++;
+	}
+    }
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		Main m = new Main();
+		m.start();
+		long i=5;
+		while(i<100){
+		    System.out.println(i+" Hello from Shashank");
+		    i++;
+	}}
+}
