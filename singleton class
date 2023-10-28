@@ -1,0 +1,24 @@
+ class Honda{
+     static Honda ref = null;
+     
+     
+     static Honda getInstance(){
+         if (ref==null)
+            ref = new Honda();
+        return ref;
+     }
+    
+}
+
+public class Main
+{
+    static int x=45;
+    
+	public static void main(String[] args) {
+	Honda h= Honda.getInstance();
+	Honda k= Honda.getInstance();
+	System.out.println(h+" "+k);
+	
+	}
+	 
+}
