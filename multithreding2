@@ -1,0 +1,43 @@
+import java.lang.*;
+class dora  extends Thread{
+
+
+    public void run() {
+        int i=0;
+        while(true){
+            System.out.println((i++) +" Hello");
+
+        }
+    }
+}
+
+
+
+
+public class Main {
+    
+     
+
+    
+    void run() {
+        int i = 0;
+        while (true) {
+            System.out.println((i++) + " world");
+
+        }
+    }
+
+    public static void main(String[] args) {
+
+
+        //SpringApplication.run(EazyschoolApplication.class, args);
+        dora t = new dora();
+
+        Main eazyschoolApplication = new Main();
+        t.start();
+        eazyschoolApplication.run();
+        
+
+    }
+
+}
